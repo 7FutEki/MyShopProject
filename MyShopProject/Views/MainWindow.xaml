@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:MyShopProject.ViewModels"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-       Height="450" Width="400" Icon="1568020565.png"  ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+       Height="450" Width="400" Icon="Logo.png"  ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Name="MainWmd">
     <Window.DataContext>
         <vm:ApplicationViewModels/>
     </Window.DataContext>
@@ -23,10 +23,10 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Image Grid.Row="0" Grid.Column="1" Source="1568020565.png"/>
+        <Image Grid.Row="0" Grid.Column="1" Source="Logo.png"/>
 
 
-        <Button Grid.Row="1" Grid.Column="0" Content="Log in"  Command="{Binding Test}"  FontSize="15" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Height="70" Width="70" />
+        <Button Grid.Row="1" Grid.Column="0" Content="Log in"  Command="{Binding LogInCommand}"  FontSize="15" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Height="70" Width="70" Cursor="Hand" />
         <Button Grid.Row="1" Grid.Column="2" Content="Sign up" FontSize="15" Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Height="70" Width="70" Cursor="Hand"/>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,144,0,0" Grid.RowSpan="2" >

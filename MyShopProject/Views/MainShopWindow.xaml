@@ -1,0 +1,51 @@
+﻿<Window x:Class="MyShopProject.Views.MainShopWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyShopProject.Views"
+        xmlns:vm="clr-namespace:MyShopProject.ViewModels"
+        mc:Ignorable="d"
+        Height="450" Width="800" Icon="Logo.png" Name="MainShopWnd" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Window.DataContext>
+        <vm:ApplicationViewModels/>
+    </Window.DataContext>
+    <Grid Background="#04859D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" 
+                 Height="30"
+                 Width="200"
+                 HorizontalAlignment="Left"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 FontFamily="Tahoma"
+                 FontSize="15"
+                 Text="{Binding Something }"/>
+        
+        <Button Grid.Row="0"
+                Width="60"
+                Height="30"
+                HorizontalAlignment="Right"
+                Margin="0,0,62,0"
+                Command="{Binding }"
+                Style="{StaticResource MaterialDesignFlatDarkButton}" Cursor="Hand">
+            <Button.Background>
+                <ImageBrush ImageSource="/Views/Account.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="0"
+                Width="60"
+                Height="30"
+                HorizontalAlignment="Right"
+                Command="{Binding }"
+                Style="{StaticResource MaterialDesignFlatDarkButton}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Views/Basket.png"/> 
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

@@ -13,6 +13,7 @@ namespace MyShopProject.Models
         public static bool IsLoginValided(string log)
         {
             bool result = true;
+            // Массив символов, которые не должны быть в логине
             string[] symbols = new string[]
             {
                 "!",
@@ -33,11 +34,12 @@ namespace MyShopProject.Models
                 "'",
                 "№"
             };
+
             if (string.IsNullOrEmpty(log) || log.Length > 15)
             {
                 result = false;
             }
-
+            
             for (int i = 0; i < symbols.Length; i++)
             {
                 Regex regex = new Regex(symbols[i]);
@@ -58,6 +60,7 @@ namespace MyShopProject.Models
         {
             if (string.IsNullOrEmpty(email) || email.Length > 20)
                 return false;
+
             Regex regex = new Regex(@"@");
             MatchCollection matchCollection = regex.Matches(email);
 
