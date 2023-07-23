@@ -39,9 +39,6 @@
     <Resource Include="Views\Account.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Views\Basket.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Views\Logo.png" />
   </ItemGroup>
 

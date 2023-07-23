@@ -42,7 +42,7 @@
                 Height="30"
                 HorizontalAlignment="Right"
                 Command="{Binding }"
-                Style="{StaticResource MaterialDesignFlatDarkButton}">
+                Style="{StaticResource MaterialDesignFlatDarkButton}" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="/Views/Basket.png"/> 
             </Button.Background>
